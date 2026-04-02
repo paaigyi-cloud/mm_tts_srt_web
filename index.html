@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myanmar TTS Pro | Free Text to Speech</title>
+    
+    <style>
+        /* စာမျက်နှာကို အပြည့်ယူရန်နှင့် နောက်ခံအရောင်ကို App နှင့် တူအောင်ထားရန် */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            background-color: #161623; 
+            font-family: Arial, sans-serif;
+        }
+        /* ကြော်ငြာပြသမည့် နေရာများအတွက် ဒီဇိုင်း */
+        .ad-banner {
+            width: 100%;
+            text-align: center;
+            background-color: #212133;
+            color: #aaa;
+            padding: 5px 0;
+            min-height: 50px; /* ကြော်ငြာအတွက် အနည်းဆုံး အမြင့် */
+            box-sizing: border-box;
+        }
+        /* Hugging Face App ကို ပြသမည့် Iframe */
+        iframe {
+            width: 100%;
+            height: calc(100% - 110px); /* အပေါ်နှင့် အောက် ကြော်ငြာနေရာကို နုတ်ထားခြင်း */
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="ad-banner" id="top-ad">
+        <p style="margin:0; font-size:12px;">Advertisement</p>
+        </div>
+
+    <iframe src="https://huggingface.co/spaces/AungChamMyae/lll" allow="microphone; clipboard-read; clipboard-write"></iframe>
+
+    <div class="ad-banner" id="bottom-ad">
+        <p style="margin:0; font-size:12px;">Advertisement</p>
+        </div>
+
+</body>
+</html>
