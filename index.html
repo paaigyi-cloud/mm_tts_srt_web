@@ -2,35 +2,51 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Myanmar TTS Pro | Free Text to Speech</title>
+    
     <meta name="monetag" content="4dea8e6e2c3eccf7c86fe69d37d05411">
-    <script src="https://quge5.com/88/tag.min.js" data-zone="225862" async data-cfasync="false"></script>
+    
+    <script>(function(d,z,s){s.src='https://'+d+'/401/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('quge5.com',8825862,document.createElement('script'))</script>
+    
     <style>
-        /* စာမျက်နှာကို အပြည့်ယူရန်နှင့် နောက်ခံအရောင်ကို App နှင့် တူအောင်ထားရန် */
+        /* Mobile တွင် Scroll ဆွဲရလွယ်ကူစေရန် ပြင်ဆင်ထားသော Flexbox Design */
         body, html {
             margin: 0;
             padding: 0;
             height: 100%;
-            overflow: hidden;
             background-color: #161623; 
             font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column; /* အပေါ်အောက် စီရန် */
+            overflow: hidden; /* ပင်မစာမျက်နှာကို ငြိမ်နေစေရန် */
         }
-        /* ကြော်ငြာပြသမည့် နေရာများအတွက် ဒီဇိုင်း */
+        
         .ad-banner {
             width: 100%;
             text-align: center;
             background-color: #212133;
             color: #aaa;
             padding: 5px 0;
-            min-height: 50px; /* ကြော်ငြာအတွက် အနည်းဆုံး အမြင့် */
+            min-height: 50px;
             box-sizing: border-box;
+            flex-shrink: 0; /* ကြော်ငြာနေရာကို ကျုံ့မသွားစေရန် */
+            z-index: 10;
         }
-        /* Hugging Face App ကို ပြသမည့် Iframe */
+        
+        /* Iframe ကို Mobile တွင် ညက်ညောစွာ Scroll ဆွဲနိုင်ရန် */
+        .iframe-container {
+            flex-grow: 1; /* ကျန်တဲ့နေရာလွတ်အားလုံးကို ယူရန် */
+            width: 100%;
+            overflow-y: auto; /* အပေါ်အောက် Scroll ဆွဲခွင့်ပေးရန် */
+            -webkit-overflow-scrolling: touch; /* iPhone/Android များတွင် Smooth Scroll ဖြစ်စေရန် (အရေးကြီးဆုံး) */
+        }
+        
         iframe {
             width: 100%;
-            height: calc(100% - 110px); /* အပေါ်နှင့် အောက် ကြော်ငြာနေရာကို နုတ်ထားခြင်း */
+            height: 100%;
             border: none;
+            display: block;
         }
     </style>
 </head>
@@ -38,13 +54,15 @@
 
     <div class="ad-banner" id="top-ad">
         <p style="margin:0; font-size:12px;">Advertisement</p>
-        </div>
+    </div>
 
-    <iframe src="https://aungchammyae-lll.hf.space" allow="microphone; clipboard-read; clipboard-write"></iframe>
+    <div class="iframe-container">
+        <iframe src="https://aungchammyae-lll.hf.space" allow="microphone; clipboard-read; clipboard-write"></iframe>
+    </div>
 
     <div class="ad-banner" id="bottom-ad">
         <p style="margin:0; font-size:12px;">Advertisement</p>
-        </div>
+    </div>
 
 </body>
 </html>
