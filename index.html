@@ -10,7 +10,6 @@
     <script>(function(d,z,s){s.src='https://'+d+'/401/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('quge5.com',8825862,document.createElement('script'))</script>
     
     <style>
-        /* Mobile တွင် Scroll ဆွဲရလွယ်ကူစေရန် ပြင်ဆင်ထားသော Flexbox Design */
         body, html {
             margin: 0;
             padding: 0;
@@ -18,28 +17,46 @@
             background-color: #161623; 
             font-family: Arial, sans-serif;
             display: flex;
-            flex-direction: column; /* အပေါ်အောက် စီရန် */
-            overflow: hidden; /* ပင်မစာမျက်နှာကို ငြိမ်နေစေရန် */
+            flex-direction: column; 
+            overflow: hidden; 
         }
         
         .ad-banner {
             width: 100%;
             text-align: center;
             background-color: #212133;
-            color: #aaa;
-            padding: 5px 0;
-            min-height: 50px;
+            padding: 10px 0;
+            min-height: 55px;
             box-sizing: border-box;
-            flex-shrink: 0; /* ကြော်ငြာနေရာကို ကျုံ့မသွားစေရန် */
+            flex-shrink: 0; 
             z-index: 10;
         }
+
+        /* 🌟 Direct Link ကိုချိတ်ထားမည့် Button Design 🌟 */
+        .custom-ad-btn {
+            display: inline-block;
+            background: linear-gradient(45deg, #ff007f, #7928ca);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            animation: pulse 2s infinite; /* အချက်ပြ လှုပ်ရှားနေစေရန် */
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
         
-        /* Iframe ကို Mobile တွင် ညက်ညောစွာ Scroll ဆွဲနိုင်ရန် */
         .iframe-container {
-            flex-grow: 1; /* ကျန်တဲ့နေရာလွတ်အားလုံးကို ယူရန် */
+            flex-grow: 1; 
             width: 100%;
-            overflow-y: auto; /* အပေါ်အောက် Scroll ဆွဲခွင့်ပေးရန် */
-            -webkit-overflow-scrolling: touch; /* iPhone/Android များတွင် Smooth Scroll ဖြစ်စေရန် (အရေးကြီးဆုံး) */
+            overflow-y: auto; 
+            -webkit-overflow-scrolling: touch; 
         }
         
         iframe {
@@ -53,7 +70,7 @@
 <body>
 
     <div class="ad-banner" id="top-ad">
-        <p style="margin:0; font-size:12px;">Advertisement</p>
+        <a href="https://omg10.com/4/10825162" target="_blank" class="custom-ad-btn">🎁 Get Free Bonus Here</a>
     </div>
 
     <div class="iframe-container">
@@ -61,7 +78,7 @@
     </div>
 
     <div class="ad-banner" id="bottom-ad">
-        <p style="margin:0; font-size:12px;">Advertisement</p>
+        <a href="https://omg10.com/4/10825162" target="_blank" class="custom-ad-btn">⚡ Support Our Website</a>
     </div>
 
 </body>
