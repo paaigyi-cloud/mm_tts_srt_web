@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Myanmar TTS Pro | Free Text to Speech</title>
     
+    <script>
+        if (window.top !== window.self) {
+            window.top.location = window.self.location;
+        }
+    </script>
+
     <meta name="monetag" content="4dea8e6e2c3eccf7c86fe69d37d05411">
     
     <script>(function(d,z,s){s.src='https://'+d+'/401/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('quge5.com',8825862,document.createElement('script'))</script>
@@ -27,14 +33,31 @@
             width: 100%;
             text-align: center;
             background-color: #212133;
-            padding: 10px 0;
-            min-height: 55px;
+            padding: 12px 10px;
             box-sizing: border-box;
             flex-shrink: 0; 
             z-index: 10;
         }
 
-        /* ခလုတ်များအတွက် Design */
+        /* VIP ခလုတ် Design */
+        .vip-btn {
+            display: inline-block;
+            background: linear-gradient(45deg, #0088cc, #005580);
+            color: white;
+            padding: 12px 15px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 13px;
+            line-height: 1.6;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            animation: pulse 2s infinite; 
+            width: 90%;
+            max-width: 500px;
+            white-space: normal;
+        }
+
+        /* အောက်ခြေ Support ခလုတ် Design */
         .custom-ad-btn {
             display: inline-block;
             background: linear-gradient(45deg, #ff007f, #7928ca);
@@ -50,7 +73,7 @@
 
         @keyframes pulse {
             0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
+            50% { transform: scale(1.02); }
             100% { transform: scale(1); }
         }
         
@@ -71,8 +94,10 @@
 </head>
 <body>
 
-    <div class="ad-banner" id="top-ad">
-        <a href="https://t.me/MM_TTS_SRT_Group" target="_blank" class="custom-ad-btn" style="background: linear-gradient(45deg, #0088cc, #005580);">👑အသံပိုကောင်တဲ့VIPဝယ်ချင်ပါကနှိပ်ပါ။</a>
+    <div class="ad-banner" id="top-ad" style="border-bottom: 2px solid #0088cc;">
+        <a href="https://t.me/MM_TTS_SRT_Group" target="_blank" class="vip-btn">
+            👑 ကြော်ငြာမပါ၊ အချိန်စောင့်စရာမလိုဘဲ အကန့်အသတ်မရှိ သုံးချင်ပါက VIP (၁ လ - ၅၀၀၀ ကျပ်) ဝယ်ယူရန် နှိပ်ပါ
+        </a>
     </div>
 
     <div class="iframe-container">
